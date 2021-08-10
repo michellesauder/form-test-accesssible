@@ -1,10 +1,9 @@
 {
   "name": "form-test-accesssible",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +11,17 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michellesauder/form-test-accesssible.git"
+  },
+  "bugs": {
+    "url": "https://github.com/michellesauder/form-test-accesssible/issues"
+  },
+  "homepage": "https://github.com/michellesauder/form-test-accesssible#readme",
+  "description": ""
 }

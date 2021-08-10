@@ -17,15 +17,15 @@
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4">lease make sure this page is responsive</p>
               <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your email" style="border: none;
+                <input type="email" id="email" class="form-control" id="exampleFormControlInput1" placeholder="enter your email" style="border: none;
                 border-radius: 0px;">
-                <button type="button" class="btn btn-sm px-4 gap-3" style="background-color: #fc593b; color: white;">Get Started</button>
+                <button type="button" id="submit" class="btn btn-sm px-4 gap-3" style="background-color: #fc593b; color: white;">Get Started</button>
               </div>
             </div>
           </div>
         <div class="row">
             <div class="col">
-            <img src="/responsive.png/">
+            <img src="" id="responsive">
                 <h1>Block 1</h1>
                 <p>Lorem ipsum dolor sit amet, 
                     consectetur adipiscing elit. Fusce porttitor elit eros, eu vehicula ipsum maximus sed. 
@@ -53,15 +53,12 @@
             </div>
           </div>
     </div>
-    <script>        
-    console.log('about to fetch');
-        fetch('rainbow.jpg').then(response => {
-            console.log(response, 'response');
-            return response.blob();
-        }).then(blob => {
-            console.log(blob);
-            document.getElementById('rainbow').src = URL.createObjectURL(blob); 
-        });
+    <script>
+        const saveEmail = () => {
+            let email = document.getElementById('email').value;
+            console.log(email, 'email')
+        }
+        document.getElementById("submit").addEventListener("click", saveEmail);        
     </script>
     <script type="module" src="/static/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
